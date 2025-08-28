@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📖 Koleksi Novelku</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="grid-pattern"></div>
+    <div class="floating-orbs">
+      <div class="orb"></div>
+      <div class="orb"></div>
+      <div class="orb"></div>
+      <div class="orb"></div>
+    </div>
+
+    <div class="relative z-10 min-h-screen">
+      <!-- Hero Section -->
+      <header class="text-center py-20 px-6">
+        <div class="fade-in-up" style="animation-delay: 0.1s">
+          <h1
+            class="hero-title text-7xl md:text-8xl font-bold mb-8 leading-tight"
+            style="font-size: 4rem"
+          >
+            🌙 Sajak, Kisah, dan Rindu yang Abadi
+          </h1>
+        </div>
+        <div class="fade-in-up" style="animation-delay: 0.3s">
+          <p
+            class="text-xl md:text-2xl text-gray-300 font-light max-w-3xl mx-auto leading-relaxed mb-8"
+          >
+            Biarkan hatimu berjalan, menyusuri kisah yang hidup di antara
+            halaman
+          </p>
+        </div>
+        <div
+          class="fade-in-up flex justify-center space-x-2 mb-12"
+          style="animation-delay: 0.5s"
+        >
+          <div class="pulse-dot" style="animation-delay: 0s"></div>
+          <div class="pulse-dot" style="animation-delay: 0.2s"></div>
+          <div class="pulse-dot" style="animation-delay: 0.4s"></div>
+        </div>
+      </header>
+
+      <!-- Books Collection -->
+      <main class="px-6 pb-20">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+            <!-- Book 1 -->
+            <div
+              class="book-card fade-in-up click-ripple"
+              style="animation-delay: 0.7s"
+              onclick="openBook(this, 'https://drive.google.com/file/d/1T2UOcA5moHyl5NvVYaAK-XUVHoVcHCDq/view', event)"
+            >
+              <div class="geometric-pattern">
+                <svg
+                  viewBox="0 0 60 60"
+                  fill="currentColor"
+                  class="text-purple-400"
+                >
+                  <circle cx="30" cy="30" r="2" />
+                  <circle cx="15" cy="15" r="1" />
+                  <circle cx="45" cy="15" r="1" />
+                  <circle cx="15" cy="45" r="1" />
+                  <circle cx="45" cy="45" r="1" />
+                  <path
+                    d="M30 10 L50 30 L30 50 L10 30 Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="0.5"
+                  />
+                </svg>
+              </div>
+
+              <div class="book-cover-modern book-cover-1 neon-glow">
+                <img src="./img/Cinta Dalam Diam-1_page-0001.jpg" alt="" />
+                <div class="book-title-overlay">
+                  <p class="text-sm opacity-80"><b>Novel Pertama</b></p>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <h4 class="text-xl font-semibold text-white mb-2">
+                  Cinta Dalam Diam
+                </h4>
+                <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                  Lewat kisah ini, saya ingin mengajak pembaca untuk kembali
+                  menyentuh sisi sunyi yang mungkin pernah singgah di hati kita.
+                  Rasa yang tak sempat tumbuh menjadi milik, tapi tetap abadi
+                  dalam kenangan. Tentang seseorang yang takpernah kita miliki,
+                  namun selalu kita doakan dalam diam.
+                </p>
+
+                <div class="book-stats">
+                  <div class="stat-item">
+                    <span>📄</span>
+                    <span>20 halaman</span>
+                  </div>
+                  <div class="stat-item">
+                    <span>💕</span>
+                    <span>Romance</span>
+                  </div>
+                  <div class="stat-item">
+                    <span>🕒</span>
+                    <span>2025</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Book 2 -->
+            <div
+              class="book-card fade-in-up click-ripple"
+              style="animation-delay: 0.9s"
+              onclick="openBook(this, 'https://drive.google.com/file/d/1CH2CBu8LbtCVnP0_VXHGnM7KFm7wHviJ/view?usp=drive_link', event)"
+            >
+              <div class="geometric-pattern">
+                <svg
+                  viewBox="0 0 60 60"
+                  fill="currentColor"
+                  class="text-pink-400"
+                >
+                  <rect
+                    x="20"
+                    y="20"
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="0.5"
+                  />
+                  <circle
+                    cx="30"
+                    cy="30"
+                    r="8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="0.5"
+                  />
+                  <circle cx="30" cy="30" r="3" />
+                </svg>
+              </div>
+
+              <div class="book-cover-modern book-cover-2 neon-glow">
+                <img src="./img/Diam Yang Keberhentikan (2).png" alt="" />
+                <div class="book-title-overlay">
+                  <p class="text-sm opacity-80"><b>Novel Kedua</b></p>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <h4 class="text-xl font-semibold text-white mb-2">
+                  Diam Yang Kuberhentikan
+                </h4>
+                <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                  Kisah ini merupakan kelanjutan dari Cinta Dalam Diam. Jika
+                  sebelumnya cerita berakhir dengan ruang kosong yang belum
+                  terisi, maka di sini saya mencoba menutupnya dengan lebih
+                  jujur dan utuh. Novel ini bercerita tentang keberanian untuk
+                  menyampaikan, tentang cinta yang tidak selalu berbalas.
+                </p>
+
+                <div class="book-stats">
+                  <div class="stat-item">
+                    <span>📄</span>
+                    <span>19 halaman</span>
+                  </div>
+                  <div class="stat-item">
+                    <span>💕</span>
+                    <span>Romance</span>
+                  </div>
+                  <div class="stat-item">
+                    <span>🕒</span>
+                    <span>2025</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Call to Action -->
+          <div
+            class="text-center mt-16 fade-in-up"
+            style="animation-delay: 1.1s"
+          >
+            <div class="glass-effect rounded-2xl p-8 max-w-2xl mx-auto">
+              <h3 class="text-2xl font-semibold text-white mb-4">
+                Ruang Rasa dalam Lembar
+              </h3>
+              <p class="text-gray-300 mb-6">
+                Bukalah sampul dan temukan kisah yang menunggu untuk dibaca.
+              </p>
+              <div class="flex justify-center space-x-4">
+                <div class="pulse-dot"></div>
+                <div class="pulse-dot" style="animation-delay: 0.3s"></div>
+                <div class="pulse-dot" style="animation-delay: 0.6s"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="text-center py-12 px-6">
+        <div class="fade-in-up" style="animation-delay: 1.3s">
+          <div
+            class="w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent mb-8 opacity-30"
+          ></div>
+          <p class="text-gray-400 text-sm">
+            © 2025 Novel Pribadi – Semua Hak Dilindungi.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
