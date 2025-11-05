@@ -1,292 +1,311 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600&display=swap");
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+/* Reset dan Pengaturan Umum */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-      body {
-        font-family: "Inter", sans-serif;
-        background: linear-gradient(
-          135deg,
-          #0f0f23 0%,
-          #1a1a2e 50%,
-          #16213e 100%
-        );
-        min-height: 100vh;
-        overflow-x: hidden;
-      }
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #0f0f23 0%,
+    #1a1a2e 50%,
+    #16213e 100%
+  );
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
-      .glass-effect {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
+main {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 
-      .hero-title {
-        font-family: "Crimson Text", serif;
-        background: linear-gradient(
-          135deg,
-          #667eea 0%,
-          #764ba2 50%,
-          #f093fb 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        filter: drop-shadow(0 4px 20px rgba(102, 126, 234, 0.3));
-      }
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-      .floating-orbs {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        pointer-events: none;
-      }
+.hero-title {
+  font-family: "Crimson Text", serif;
+  background: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 50%,
+    #f093fb 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 4px 20px rgba(102, 126, 234, 0.3));
+}
 
-      .orb {
-        position: absolute;
-        border-radius: 50%;
-        background: linear-gradient(
-          135deg,
-          rgba(102, 126, 234, 0.1),
-          rgba(240, 147, 251, 0.1)
-        );
-        animation: float-orb 20s infinite linear;
-      }
+/* Orb Hiasan Mengambang */
+.floating-orbs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
 
-      .orb:nth-child(1) {
-        width: 80px;
-        height: 80px;
-        left: 10%;
-        animation-delay: 0s;
-      }
-      .orb:nth-child(2) {
-        width: 120px;
-        height: 120px;
-        left: 80%;
-        animation-delay: -5s;
-      }
-      .orb:nth-child(3) {
-        width: 60px;
-        height: 60px;
-        left: 50%;
-        animation-delay: -10s;
-      }
-      .orb:nth-child(4) {
-        width: 100px;
-        height: 100px;
-        left: 20%;
-        animation-delay: -15s;
-      }
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1),
+    rgba(240, 147, 251, 0.1)
+  );
+  animation: float-orb 20s infinite linear;
+}
 
-      @keyframes float-orb {
-        0% {
-          transform: translateY(100vh) rotate(0deg);
-          opacity: 0;
-        }
-        10% {
-          opacity: 1;
-        }
-        90% {
-          opacity: 1;
-        }
-        100% {
-          transform: translateY(-100px) rotate(360deg);
-          opacity: 0;
-        }
-      }
+.orb:nth-child(1) {
+  width: 80px;
+  height: 80px;
+  left: 10%;
+  animation-delay: 0s;
+}
 
-      .book-card {
-        background: linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.1),
-          rgba(255, 255, 255, 0.05)
-        );
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 24px;
-        padding: 2rem;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        position: relative;
-        overflow: hidden;
-      }
+.orb:nth-child(2) {
+  width: 120px;
+  height: 120px;
+  left: 80%;
+  animation-delay: -5s;
+}
 
-      .book-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.1),
-          transparent
-        );
-        transition: left 0.6s;
-      }
+.orb:nth-child(3) {
+  width: 60px;
+  height: 60px;
+  left: 50%;
+  animation-delay: -10s;
+}
 
-      .book-card:hover::before {
-        left: 100%;
-      }
+.orb:nth-child(4) {
+  width: 100px;
+  height: 100px;
+  left: 20%;
+  animation-delay: -15s;
+}
 
-      .book-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
-        border-color: rgba(102, 126, 234, 0.3);
-      }
+@keyframes float-orb {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
 
-      .book-cover-modern {
-        width: 200px;
-        height: 280px;
-        border-radius: 16px;
-        position: relative;
-        overflow: hidden;
-        margin: 0 auto 1.5rem;
-        cursor: pointer;
-        transition: all 0.4s ease;
-      }
+/* Kartu Buku */
+.book-card {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
 
-      .book-cover-1 {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      }
+.book-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.6s;
+}
 
-      .book-cover-2 {
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      }
+.book-card:hover::before {
+  left: 100%;
+}
 
-      .book-cover-modern::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(
-          135deg,
-          rgba(255, 255, 255, 0.1) 0%,
-          transparent 50%,
-          rgba(255, 255, 255, 0.05) 100%
-        );
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
+.book-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+  border-color: rgba(102, 126, 234, 0.3);
+}
 
-      .book-cover-modern:hover::after {
-        opacity: 1;
-      }
+/* Sampul Buku Modern */
+.book-cover-modern {
+  width: 200px;
+  height: 280px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 1.5rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
 
-      .book-title-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-        color: white;
-        padding: 1.5rem 1rem 1rem;
-        text-align: center;
-      }
+.book-cover-1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
 
-      .geometric-pattern {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        width: 60px;
-        height: 60px;
-        opacity: 0.1;
-      }
+.book-cover-2 {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
 
-      .pulse-dot {
-        width: 8px;
-        height: 8px;
-        background: linear-gradient(135deg, #667eea, #f093fb);
-        border-radius: 50%;
-        animation: pulse 2s infinite;
-      }
+.book-cover-modern::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
-      @keyframes pulse {
-        0%,
-        100% {
-          transform: scale(1);
-          opacity: 1;
-        }
-        50% {
-          transform: scale(1.2);
-          opacity: 0.7;
-        }
-      }
+.book-cover-modern:hover::after {
+  opacity: 1;
+}
 
-      .fade-in-up {
-        animation: fadeInUp 0.8s ease-out forwards;
-        opacity: 0;
-      }
+.book-title-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  padding: 1.5rem 1rem 1rem;
+  text-align: center;
+}
 
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+/* Pola Geometris */
+.geometric-pattern {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  opacity: 0.1;
+}
 
-      .grid-pattern {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: linear-gradient(
-            rgba(255, 255, 255, 0.02) 1px,
-            transparent 1px
-          ),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-        background-size: 50px 50px;
-        pointer-events: none;
-      }
+/* Titik Berdenyut */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #667eea, #f093fb);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
 
-      .neon-glow {
-        box-shadow: 0 0 20px rgba(102, 126, 234, 0.3),
-          0 0 40px rgba(102, 126, 234, 0.2), 0 0 60px rgba(102, 126, 234, 0.1);
-      }
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
 
-      .book-stats {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 1rem;
-        font-size: 0.875rem;
-        color: rgba(255, 255, 255, 0.7);
-      }
+/* Animasi Masuk dari Bawah */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
 
-      .stat-item {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-      .click-ripple {
-        position: relative;
-        overflow: hidden;
-      }
+/* Pola Grid Latar Belakang */
+.grid-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
 
-      .ripple {
-        position: absolute;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.3);
-        transform: scale(0);
-        animation: ripple-animation 0.6s linear;
-        pointer-events: none;
-      }
+/* Efek Cahaya Neon */
+.neon-glow {
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.3),
+    0 0 40px rgba(102, 126, 234, 0.2), 0 0 60px rgba(102, 126, 234, 0.1);
+}
 
-      @keyframes ripple-animation {
-        to {
-          transform: scale(4);
-          opacity: 0;
-        }
-      }
+/* Statistik Buku */
+.book-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Efek Ripple saat Klik */
+.click-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0);
+  animation: ripple-animation 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
